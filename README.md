@@ -23,15 +23,15 @@ Build a small quiz for runners to find their perfect shoe.
 
 ### Layouts
 #### Start Screen
-![alt text](./layouts/1_start_screen.png "Start Screen")
+![alt text](./src/layouts/1_start_screen.png "Start Screen")
 
 #### Question Screen
-![alt text](./layouts/2_question_screen.png "Question Screen")
+![alt text](./src/layouts/2_question_screen.png "Question Screen")
 
 #### Loading Screen
-![alt text](./layouts/3_loading_screen.png "Loading Screen")
+![alt text](./src/layouts/3_loading_screen.png "Loading Screen")
 
 #### Results Screen
-![alt text](./layouts/4_results_screen.png "Results Screen")
+![alt text](./src/layouts/4_results_screen.png "Results Screen")
 
 Have fun and good luck!

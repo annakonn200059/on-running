@@ -1,0 +1,26 @@
+.topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  color: var(--text-h);
+
+  svg {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 24px;
+  justify-content: flex-end;
+}
