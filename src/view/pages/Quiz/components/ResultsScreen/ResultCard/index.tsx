@@ -8,10 +8,11 @@ const PRODUCT_COLORWAY = 'Neon & Grey';
 
 interface ProductCardProps {
   shoe: Shoe;
+  variant?: 'hero' | 'similar';
 }
 
-const ProductCard = ({ shoe }: ProductCardProps) => (
-  <div className={styles.card}>
+const ProductCard = ({ shoe, variant = 'similar' }: ProductCardProps) => (
+  <div className={`${styles.card} ${variant === 'hero' ? styles.cardHero : ""}`}>
     <div className={styles.content}>
       <img className={styles.image} src={shoeImageByName[shoe.id]} alt={shoe.name} />
 

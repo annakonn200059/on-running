@@ -31,18 +31,21 @@ const ResultsScreen = ({ shoes, onRestart }: ResultsScreenProps) => {
         </p>
       </div>
       
-      <ProductCard shoe={result} />
+      <ProductCard shoe={result} variant="hero" />
 
       {similarShoesToShow.length > 0 && (
         <>
           <h3 className={styles.similarShoes_title}>Similar profiles</h3>
 
-          {similarShoesToShow.map((shoe) => (
-            <ProductCard
-              key={shoe.id}
-              shoe={shoe}
-            />
-          ))}
+          <div className={styles.similarGrid}>
+            {similarShoesToShow.map((shoe) => (
+              <ProductCard
+                key={shoe.id}
+                shoe={shoe}
+                variant="similar"
+              />
+            ))}
+          </div>
         </>
       )}
 

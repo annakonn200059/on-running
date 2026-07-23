@@ -18,6 +18,18 @@
     gap: 26px;
     width: 90%;
   }
+
+  @media (min-width: vars.$breakpoint-mobile) {
+    max-width: 1040px;
+    padding: 72px 48px 96px;
+    gap: 48px;
+
+    .header {
+      width: 100%;
+      max-width: 620px;
+      padding: 0;
+    }
+  }
 }
 
 .intro {
@@ -37,6 +49,50 @@
   .content {
     background: var(--light-grey-bg);
     padding: 40px 32px;
+  }
+}
+
+.cardHero {
+  @media (min-width: vars.$breakpoint-mobile) {
+    align-items: stretch;
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 56px;
+      padding: 56px;
+    }
+
+    .image {
+      flex: 1 1 50%;
+      min-width: 0;
+      max-height: 340px;
+      margin-bottom: 0;
+    }
+
+    .info {
+      flex: 1 1 50%;
+      min-width: 0;
+      text-align: left;
+    }
+
+    .button {
+      align-self: center;
+    }
+  }
+}
+
+.similarGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (min-width: vars.$breakpoint-mobile) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
   }
 }
 
