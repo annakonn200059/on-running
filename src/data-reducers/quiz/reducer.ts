@@ -4,12 +4,14 @@ export const QuizActionType = {
   QUIZ_LOADED: 'QUIZ_LOADED',
   ANSWER_SELECTED: 'ANSWER_SELECTED',
   RESULTS_READY: 'RESULTS_READY',
+  RESET: 'RESET',
 } as const;
 
 export type QuizFlowAction =
   | { type: typeof QuizActionType.QUIZ_LOADED; payload: Quiz }
   | { type: typeof QuizActionType.ANSWER_SELECTED; payload: QuizAnswer }
-  | { type: typeof QuizActionType.RESULTS_READY };
+  | { type: typeof QuizActionType.RESULTS_READY }
+  | { type: typeof QuizActionType.RESET };
 
 export const initialQuizFlowState: QuizFlowState = {
   phase: QuizPhase.START,
@@ -72,6 +74,9 @@ export function quizReducer(state: QuizFlowState, action: QuizFlowAction): QuizF
 
     case QuizActionType.RESULTS_READY:
       return { ...state, phase: QuizPhase.RESULTS };
+
+    case QuizActionType.RESET:
+      return initialQuizFlowState;
 
     default:
       return state;

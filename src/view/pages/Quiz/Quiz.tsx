@@ -49,6 +49,10 @@ const Quiz = () => {
     });
   };
 
+  const handleRestart = () => {
+    dispatch({ type: QuizActionType.RESET });
+  };
+
   switch (state.phase) {
     case QuizPhase.QUESTION: {
       const question = getCurrentQuestion(state.quiz, state.currentQuestionId);
@@ -71,7 +75,7 @@ const Quiz = () => {
     case QuizPhase.RESULTS: {
       const rankedShoes = getRankedShoes(state.quiz, state.ratings);
 
-      return <ResultsScreen shoes={rankedShoes} />;
+      return <ResultsScreen shoes={rankedShoes} onRestart={handleRestart} />;
     }
 
     case QuizPhase.START:
