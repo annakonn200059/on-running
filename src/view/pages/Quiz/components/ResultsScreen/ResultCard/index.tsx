@@ -1,6 +1,6 @@
-import type { Shoe } from "@/types/quiz";
+import type { Shoe } from '@/types/quiz';
 import styles from '../ResultsScreen.module.scss';
-import { shoeImageByName } from "@/assets/products/shoeImages";
+import { shoeImageByName } from '@/assets/products/shoeImages';
 
 const PRODUCT_DESCRIPTION = "Your perfect partner in the world's lightest fully-cushioned shoe for Running Remixed.";
 const PRODUCT_PRICE = '200 CHF';
@@ -12,7 +12,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ shoe, variant = 'similar' }: ProductCardProps) => (
-  <div className={`${styles.card} ${variant === 'hero' ? styles.cardHero : ""}`}>
+  <div className={variant === 'hero' ? `${styles.card} ${styles.cardHero}` : styles.card}>
     <div className={styles.content}>
       <img className={styles.image} src={shoeImageByName[shoe.id]} alt={shoe.name} />
 

@@ -1,4 +1,4 @@
-import type { Quiz, QuizQuestion, Shoe, ShoeId } from "@/types/quiz";
+import type { Quiz, QuizQuestion, Shoe, ShoeId } from '@/types/quiz';
 
 export function getCurrentQuestion(
   quiz: Quiz | null,

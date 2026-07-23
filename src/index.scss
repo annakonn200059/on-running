@@ -5,16 +5,13 @@
   --text: #6b6375;
   --text-h: #08060d;
   --text-muted: #878787;
+  --accent: #3c6473;
   --bg: #fff;
   --border: #e5e4e7;
   --light-grey-bg: rgba(239, 239, 240, 0.5);
   --dark-grey-bg: rgba(33, 31, 32, 0.8);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-  --button-blue: #3c6473;
   --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: 'Gelasio', 'Georgia', serif;
-  --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;

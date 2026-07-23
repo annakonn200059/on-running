@@ -8,10 +8,10 @@ interface ResultsScreenProps {
 }
 
 const ResultsScreen = ({ shoes, onRestart }: ResultsScreenProps) => {
-  const [result, ...similarShoes] = shoes;
-  const similarShoesToShow = similarShoes.slice(0, 2);
+  const [result, ...rest] = shoes;
+  const similarShoesToShow = rest.slice(0, 2);
 
-  const recommendedNames = [result, ...similarShoes]
+  const recommendedNames = shoes
     .slice(0, 2)
     .map(({ name }) => name)
     .join(' and ');
@@ -30,12 +30,12 @@ const ResultsScreen = ({ shoes, onRestart }: ResultsScreenProps) => {
           Enjoy the 30 day trial!
         </p>
       </div>
-      
+
       <ProductCard shoe={result} variant="hero" />
 
       {similarShoesToShow.length > 0 && (
         <>
-          <h3 className={styles.similarShoes_title}>Similar profiles</h3>
+          <h3 className={styles.similarProfilesTitle}>Similar profiles</h3>
 
           <div className={styles.similarGrid}>
             {similarShoesToShow.map((shoe) => (
