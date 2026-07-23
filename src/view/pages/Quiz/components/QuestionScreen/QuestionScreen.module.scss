@@ -12,16 +12,17 @@
   .content{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     padding-top: 90px;
     text-align: center;
     gap: 90px;
+    width: 100%;
   }
 }
 
-.title {
-  font-family: var(--heading);
+.description {
+  opacity: 0.85;
 }
 
 .answers {
@@ -38,6 +39,5 @@
   background: transparent;
   color: inherit;
   border: 1px solid currentColor;
-  cursor: pointer;
   width: 100%;
 }

@@ -4,6 +4,7 @@
 :root {
   --text: #6b6375;
   --text-h: #08060d;
+  --text-muted: #878787;
   --bg: #fff;
   --border: #e5e4e7;
   --light-grey-bg: rgba(239, 239, 240, 0.5);
@@ -47,39 +48,48 @@ body {
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-}
 
 h1 {
+  font-family: var(--heading);
+  font-weight: 400;
   font-size: 56px;
-  letter-spacing: -1.68px;
+  letter-spacing: 1px;
   line-height: 118%;
   margin: 0;
-  @media (max-width: 1024px) {
+
+  @media (max-width: vars.$breakpoint-mobile) {
     font-size: 26px;
   }
 }
+
 h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 3px;
+  line-height: 160%;
+  text-transform: uppercase;
   margin: 0;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+
+  @media (max-width: vars.$breakpoint-mobile) {
+    font-size: 10px;
+    letter-spacing: 3px;
+    line-height: 170%;
   }
 }
 
+button {
+  font-family: var(--heading);
+  font-size: 16px;
+  cursor: pointer;
+}

@@ -11,7 +11,7 @@ const QuestionScreen = ({ question, onAnswer }: QuestionScreenProps) => (
     <h2 className={styles.description}> TRY ON QUIZ <br /> 30 DAYS RISK FREE</h2>
 
     <div className={styles.content}>
-      <h1 className={styles.title}>{question.copy}</h1>
+      <h1>{question.copy}</h1>
 
       <div className={styles.answers}>
         {question.answers.map((answer) => (

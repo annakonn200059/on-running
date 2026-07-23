@@ -10,7 +10,7 @@ interface StartScreenProps {
 const StartScreen = ({ loading, error, onStart }: StartScreenProps) => (
   <section className={styles.startScreen}>
     <div className={styles.content}>
-      <h1 className={styles.title}>
+      <h1>
         Take the quiz
         <br />
         and try your first pair!

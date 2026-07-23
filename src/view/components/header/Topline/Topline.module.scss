@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 24px;
+  padding: 18px 24px;
 
   @media (max-width: vars.$breakpoint-mobile) {
     display: grid;
@@ -21,7 +21,7 @@
   padding: 0;
   background: none;
   border: none;
-  color: var(--text-h);
+  color: var(--light-grey-bg);
   cursor: pointer;
 
   svg {
