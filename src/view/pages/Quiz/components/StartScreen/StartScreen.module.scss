@@ -1,0 +1,36 @@
+.startScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 60px 24px;
+  text-align: left;
+  background: var(--light-grey-bg);
+  height: 100%;
+}
+
+.button {
+  font: inherit;
+  font-family: var(--heading);
+  padding: 12px 32px;
+  background: var(--text-h);
+  color: var(--bg);
+  border: none;
+  cursor: pointer;
+  border-bottom: 3px solid var(--light-grey-bg);
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+}
+
+.error {
+  color: #d33;
+  font-size: 14px;
+}
+
+.note {
+  color: var(--text);
+  font-size: 14px;
+}

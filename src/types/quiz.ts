@@ -14,20 +14,37 @@ export interface Shoe {
   rating: number
 }
 
-export interface Answer {
+export interface QuizAnswer {
   id?: number
   copy: string
   nextQuestion: number | ''
   ratingIncrease: Record<ShoeId, number>
 }
 
-export interface Question {
+export interface QuizQuestion {
   id: number
   copy: string
-  answers: Answer[]
+  answers: QuizAnswer[]
 }
 
 export interface Quiz {
   shoes: Shoe[]
-  questions: Question[]
+  questions: QuizQuestion[]
 }
+
+export const QuizPhase = {
+  START: 'start',
+  QUESTION: 'question',
+  CALCULATING_RESULTS: 'calculatingResults',
+  RESULTS: 'results',
+} as const;
+
+export type QuizPhase = (typeof QuizPhase)[keyof typeof QuizPhase];
+
+export interface QuizFlowState {
+  phase: QuizPhase;
+  quiz: Quiz | null;
+  currentQuestionId: number | null;
+  ratings: Record<ShoeId, number>;
+}
+

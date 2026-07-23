@@ -1,15 +1,15 @@
-import type { Quiz } from '../types/quiz'
-import { MOCK_DELAY_MS } from '../utils/constants'
+import type { Quiz } from '../../types/quiz'
+import { MOCK_DELAY_MS } from '../../utils/constants'
 
 function delay(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
-export async function fetchQuizData(): Promise<Quiz> {
+export async function fetchQuiz(): Promise<Quiz> {
   const [response] = await Promise.all([fetch('/data.json'), delay(MOCK_DELAY_MS)])
 
   if (!response.ok) {
-    throw new Error(`Failed to load quiz data: ${response.status}`)
+    throw new Error(`Failed to load quiz: ${response.status}`)
   }
 
   return response.json()
