@@ -6,7 +6,7 @@ function delay(ms: number) {
 }
 
 export async function fetchQuiz(): Promise<Quiz> {
-  const [response] = await Promise.all([fetch('/data.json'), delay(MOCK_DELAY_MS)])
+  const [response] = await Promise.all([fetch(`${import.meta.env.BASE_URL}data.json`), delay(MOCK_DELAY_MS)])
 
   if (!response.ok) {
     throw new Error(`Failed to load quiz: ${response.status}`)
