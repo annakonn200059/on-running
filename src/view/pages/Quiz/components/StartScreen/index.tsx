@@ -1,4 +1,5 @@
 import styles from './StartScreen.module.scss';
+import runner from '@/assets/Background Image Start Screen.png';
 
 interface StartScreenProps {
   loading: boolean;
@@ -8,21 +9,25 @@ interface StartScreenProps {
 
 const StartScreen = ({ loading, error, onStart }: StartScreenProps) => (
   <section className={styles.startScreen}>
-    <h1 className={styles.title}>
-      Take the quiz
-      <br />
-      and try your first pair!
-    </h1>
+    <div className={styles.content}>
+      <h1 className={styles.title}>
+        Take the quiz
+        <br />
+        and try your first pair!
+      </h1>
 
-    <button type="button" className={styles.button} onClick={onStart} disabled={loading}>
-      {loading ? 'Loading…' : 'Try On Trial'}
-    </button>
+      <button type="button" className={styles.button} onClick={onStart} disabled={loading}>
+        {loading ? 'Loading…' : 'Try On Trial'}
+      </button>
 
-    {error && <p className={styles.error}>{error}</p>}
+      {error && <p className={styles.error}>{error}</p>}
 
-    <p className={styles.note}>
-      30 Days risk free
-    </p>
+      <p className={styles.note}>
+        30 Days risk free
+      </p>
+    </div>
+
+    <img className={styles.runner} src={runner} alt="Runner wearing On shoes" />
   </section>
 );
 
